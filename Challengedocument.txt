@@ -1,4 +1,4 @@
-Level-1
+#Level-1
 Find the contents of readme file in the user that belongs to challenge group?
 NOTE: Password to that user account is bestplayer
 Commands needed for this level:
@@ -7,31 +7,32 @@ Su, id, cd, ls, cat, grep, find
 2.	stendulkar user belongs to challenge group
 3.	readme.txt file in root of stendulkar has a value that is the answer to level-1 of puzzle.
 Solution:
-ï	Running the shell script as root user creates 4 user accounts- dbradman, stendulkar, kdev, vrichard.
-ï	Execute id <username>  for each user. The group names in which the users belong to is displayed. Stendulkar belongs to challenge group.
-ï	Su stendulkar. Password: bestplayer.
-ï	Cd ~ to change to root of stendulkar
-ï	Ls
-ï	Cat readme.txt
-ï	The string in readme.txt is bestplayer.
+‚Ä¢	Running the shell script as root user creates 4 user accounts- dbradman, stendulkar, kdev, vrichard.
+‚Ä¢	Execute id <username>  for each user. The group names in which the users belong to is displayed. Stendulkar belongs to challenge group.
+‚Ä¢	Su stendulkar. Password: bestplayer.
+‚Ä¢	Cd ~ to change to root of stendulkar
+‚Ä¢	Ls
+‚Ä¢	Cat readme.txt
+‚Ä¢	The string in readme.txt is bestplayer.
 
-Level-2
+#Level-2
 Use the string in readme.txt file previously obtained as the password to dbradman account. Decipher the instructions of login.txt.xz file in root directory of dbradman account.
 Commands needed for this level:
 Su, cd, ls, cat, grep, find, tr
 Solution:
-ï	su dbradman with password bestplayer. 
-ï	Cd ~ to change to root of dbradman.
-ï	Ls ñal of login.txt.xz shows that root is the owner of this folder. 
-ï	To unxz this folder, login as root.
-ï	Execute Unxz login.txt.xz (NOTE: The file group is set as root only when the .xz is unxzed as root)
-ï	Execute the following command:
+‚Ä¢	su dbradman with password bestplayer. 
+‚Ä¢	Cd ~ to change to root of dbradman.
+‚Ä¢	Ls ‚Äìal of login.txt.xz shows that root is the owner of this folder. 
+‚Ä¢	To unxz this folder, login as root.
+‚Ä¢	Execute Unxz login.txt.xz (NOTE: The file group is set as root only when the .xz is unxzed as root)
+‚Ä¢	Execute the following command:
 
-Echo ìkrvw: orfdokrvw, xvhuqdph: yulfkdug, sdvvzrug: ehvwsodbhuî | tr [d-za-c] [a-z]
+Echo ‚Äúkrvw: orfdokrvw, xvhuqdph: yulfkdug, sdvvzrug: ehvwsodbhu‚Äù | tr [d-za-c] [a-z]
 
 That would give the decrypted message as:
 host: localhost, username: vrichard, password: bestplayer
-Level-3
+
+#Level-3
 Backup Documents folder to Level-3 directory of server specified in login.txt . 
 Instructions for Level-3:
 1.	Do not login to the server using GUI or terminal. You must use remote access.
@@ -39,16 +40,17 @@ Instructions for Level-3:
 3.	Provide information about the files being transferred and a brief summary at the end.
 
 Solution:
-ï	systemctl start sshd.service
-ï	Ssh vrichard@localhost
-ï	Rsync ñavz Documents/ vrichard@localhost 
-Level-4
+‚Ä¢	systemctl start sshd.service
+‚Ä¢	Ssh vrichard@localhost
+‚Ä¢	Rsync ‚Äìavz Documents/ vrichard@localhost 
+
+#Level-4
 Execute the largest file located at Level-4 directory from localhost vrichard.
-ï	Cd  Level-4
-ï	Ls ñal
-ï	Program-20.py is the largest file
-ï	Chmod 755 Program-20.py
-ï	Python Program-20.py
+‚Ä¢	Cd  Level-4
+‚Ä¢	Ls ‚Äìal
+‚Ä¢	Program-20.py is the largest file
+‚Ä¢	Chmod 755 Program-20.py
+‚Ä¢	Python Program-20.py
 	
  
 
